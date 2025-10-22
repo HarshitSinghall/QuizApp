@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Time 🧠"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp" />
+
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sharpen your mind, one quiz at a time!"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvAppTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+
+    <LinearLayout
+        android:id="@+id/btnContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartQuizSet"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Start Quiz Set"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:cornerRadius="16dp"
+            app:backgroundTint="#2196F3"
+            android:layout_marginBottom="16dp"
+            android:paddingVertical="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:drawableStart="@drawable/ic_play"
+            android:drawablePadding="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartQuiz"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Start Quiz"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:cornerRadius="16dp"
+            app:backgroundTint="#2196F3"
+            android:layout_marginBottom="16dp"
+            android:paddingVertical="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:drawableStart="@drawable/ic_play"
+            android:drawablePadding="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnQuizHistory"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Quiz History"
+            android:textAllCaps="false"
+            android:textColor="#2196F3"
+            app:cornerRadius="16dp"
+            app:strokeColor="#2196F3"
+            app:strokeWidth="2dp"
+            android:fontFamily="sans-serif-medium"
+            android:drawableStart="@drawable/ic_history"
+            android:drawablePadding="8dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
